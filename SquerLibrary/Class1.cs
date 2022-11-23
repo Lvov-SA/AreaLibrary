@@ -9,8 +9,14 @@ namespace AreaLibrary
 
     public class Figure 
     {
-        public bool isRectangle = false;
-        public double area;
+        public bool isRectangle = false; //переменная для хранения данных, есть ли у треугольника прямой угол
+        public double area; // переменная хранения площади фигуры
+        /// <summary>
+        /// конструктор с перегрузкой, вызыввется при передаче трех значений
+        /// </summary>
+        /// <param name="a_">первая сторона треугольника</param>
+        /// <param name="b_">вторая сторона треугольника</param>
+        /// <param name="c_">третья сторона треугольника</param>
         public Figure(double a_, double b_, double c_)
         {
             if(a_<=0 || b_<=0 || c_ <= 0)
@@ -34,6 +40,10 @@ namespace AreaLibrary
                 isRectangle = false;
             }
         }
+        /// <summary>
+        ///  конструктор с перегрузкой, вызывается при передаче только одного значения
+        /// </summary>
+        /// <param name="r_"> радиус окружности</param>
         public Figure(double r_)
         {
             if (r_ <= 0)
